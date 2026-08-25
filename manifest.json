@@ -1,0 +1,14 @@
+{
+  "name": "Aliya Jewels",
+  "short_name": "Aliya Jewels",
+  "description": "Aliya Jewels — Dubai gold trading and luxury jewelry, live gold prices, bullion, custom jewelry.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0F5E4A",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

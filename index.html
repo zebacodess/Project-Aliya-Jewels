@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Aliya Jewels</title>
+<meta name="description" content="Aliya Jewels L.L.C. is a trusted gold trader, bullion dealer and custom jewelry manufacturer in Dubai Gold Souk, Deira. Live gold prices, bullion trading, custom jewellery and certified diamonds." />
+<meta name="theme-color" content="#0F5E4A" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="logo.png" />
+<meta property="og:title" content="Aliya Jewels" />
+<meta property="og:description" content="Live gold prices, bullion trading and custom jewellery manufacturing from Dubai Gold Souk." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --gold:#D4AF37;
+  --gold-2:#E8C766;
+  --champagne:#F3D58A;
+  --emerald:#0F5E4A;
+  --forest:#1B4332;
+  --charcoal:#1A1A1A;
+  --ivory:#F9F6F0;
+
+  --bg:var(--ivory);
+  --bg-alt:#EAF1EC;
+  --text:var(--charcoal);
+  --text-soft:#4A4A40;
+  --surface:#FFFFFF;
+  --surface-glass:rgba(255,255,255,0.62);
+  --border:rgba(15,94,74,0.14);
+  --shadow:0 20px 60px -20px rgba(15,94,74,0.28);
+  --up:#1B7A4D;
+  --down:#B3402B;
+  --radius:18px;
+  --radius-sm:10px;
+  --maxw:1240px;
+  --nav-h:78px;
+}
+[data-theme="dark"]{
+  --bg:#0F1512;
+  --bg-alt:#122019;
+  --text:#F3EFE6;
+  --text-soft:#B9CFC4;
+  --surface:#152420;
+  --surface-glass:rgba(19,32,27,0.66);
+  --border:rgba(212,175,55,0.18);
+  --shadow:0 24px 70px -20px rgba(0,0,0,0.6);
+  --up:#4ED393;
+  --down:#F08167;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;} }
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased;
+  transition:background .4s ease, color .4s ease;
+}
+h1,h2,h3,h4,.font-display{font-family:'Playfair Display',serif; font-weight:600; margin:0; letter-spacing:.2px;}
+p{line-height:1.7; color:var(--text-soft); margin:0;}
+a{color:inherit; text-decoration:none;}
+img,svg{display:block; max-width:100%;}
+button{font-family:inherit; cursor:pointer;}
+.skip-link{position:absolute; left:-999px; top:0; background:var(--gold); color:#1A1A1A; padding:12px 18px; z-index:999; border-radius:0 0 8px 0;}
+.skip-link:focus{left:0;}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+.container{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+section{position:relative;}
+.eyebrow{display:inline-flex; align-items:center; gap:10px; font-size:12.5px; letter-spacing:2.4px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:14px;}
+.eyebrow::before{content:""; width:26px; height:1px; background:var(--gold);}
+.section-head{max-width:640px; margin-bottom:48px;}
+.section-head h2{font-size:clamp(28px,3.6vw,42px); line-height:1.15;}
+.section-head p{margin-top:14px; font-size:16px;}
+.section-pad{padding:96px 0;}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:15px 30px; border-radius:100px; font-weight:600; font-size:14.5px; letter-spacing:.3px; border:1px solid transparent; background:transparent; appearance:none; -webkit-appearance:none; color:inherit; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;}
+.btn:hover{transform:translateY(-2px);}
+.btn-gold{background:linear-gradient(135deg,var(--champagne),var(--gold) 55%,#9c7a22); color:#1A1A1A; box-shadow:0 12px 30px -10px rgba(212,175,55,0.55);}
+.btn-outline{border-color:rgba(249,246,240,0.5); color:inherit;}
+.btn-outline.on-light{border-color:rgba(15,94,74,0.4); color:var(--emerald);}
+[data-theme="dark"] .btn-outline.on-light{color:#4ED393; border-color:rgba(78,211,147,0.4);}
+.btn-ghost{background:var(--surface-glass); border:1px solid var(--border); color:var(--text); backdrop-filter:blur(10px);}
+.pill{display:inline-flex; align-items:center; gap:6px; font-size:12.5px; padding:6px 12px; border-radius:100px; border:1px solid var(--border); background:var(--surface-glass);}
+.card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;}
+.card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:rgba(212,175,55,0.45);}
+.grid{display:grid; gap:24px;}
+.icon-badge{width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, rgba(212,175,55,0.18), rgba(212,175,55,0.05)); color:var(--gold); flex-shrink:0;}
+.icon-badge svg{width:26px; height:26px;}
+.visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
+
+/* ============ PARTICLES ============ */
+#particles{position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;}
+.particle{position:absolute; border-radius:50%; background:radial-gradient(circle at 30% 30%, var(--champagne), var(--gold) 60%, transparent 75%); opacity:.35; animation:drift linear infinite;}
+@keyframes drift{ 0%{transform:translateY(0) translateX(0);} 100%{transform:translateY(-1200px) translateX(40px);} }
+
+/* ============ NAV ============ */
+.nav{position:fixed; top:0; left:0; right:0; z-index:200; height:var(--nav-h); display:flex; align-items:center; background:var(--surface-glass); backdrop-filter:blur(16px) saturate(140%); border-bottom:1px solid var(--border); transition:background .4s ease, border-color .4s ease;}
+.nav::after{content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:linear-gradient(90deg, var(--emerald), var(--gold) 35%, var(--champagne) 50%, var(--gold) 65%, var(--emerald));}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; width:100%; max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+.logo{display:flex; align-items:center; gap:10px; font-family:'Playfair Display',serif; font-size:21px; font-weight:700; letter-spacing:.5px;}
+.logo .mark{width:36px; height:36px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 1px rgba(212,175,55,0.4);}
+.nav-links{display:flex; gap:34px; list-style:none; margin:0; padding:0;}
+.nav-links a{font-size:14.5px; font-weight:500; color:var(--text-soft); position:relative; padding:6px 0;}
+.nav-links a::after{content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:var(--gold); transform:scaleX(0); transition:transform .3s ease;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
+.nav-actions{display:flex; align-items:center; gap:14px;}
+.icon-btn{width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:var(--surface); display:flex; align-items:center; justify-content:center; color:var(--text); transition:border-color .25s ease, color .25s ease;}
+.icon-btn:hover{border-color:var(--gold); color:var(--gold);}
+.nav-whatsapp{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; padding:8px 14px; border-radius:100px; border:1px solid var(--border); background:var(--surface);}
+.nav-whatsapp svg{width:16px; height:16px; color:#25D366;}
+.hamburger{display:none;}
+.mobile-menu{position:fixed; top:var(--nav-h); left:0; right:0; background:var(--surface); border-bottom:1px solid var(--border); padding:18px 28px; display:none; flex-direction:column; gap:16px; z-index:199; box-shadow:var(--shadow);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:16px; padding:8px 0; border-bottom:1px solid var(--border);}
+
+/* Search overlay */
+.search-overlay{position:fixed; inset:0; background:rgba(20,19,17,.55); backdrop-filter:blur(4px); z-index:300; display:none; align-items:flex-start; justify-content:center; padding-top:14vh;}
+.search-overlay.open{display:flex;}
+.search-box{width:min(560px,90vw); background:var(--surface); border-radius:var(--radius); padding:10px; box-shadow:var(--shadow); display:flex; align-items:center; gap:10px; border:1px solid var(--border);}
+.search-box input{flex:1; border:none; outline:none; background:transparent; color:var(--text); font-size:16px; padding:12px;}
+.search-hint{color:var(--text-soft); font-size:12.5px; margin-top:10px; text-align:center;}
+
+/* ============ HERO ============ */
+.hero{min-height:100svh; display:flex; align-items:center; padding-top:var(--nav-h); background:
+  radial-gradient(1100px 700px at 82% -10%, rgba(212,175,55,0.20), transparent 60%),
+  radial-gradient(1000px 700px at 6% 105%, rgba(15,94,74,0.55), transparent 62%),
+  linear-gradient(165deg, var(--charcoal) 0%, #16281f 42%, var(--forest) 78%, #0d1e16 100%);
+  color:var(--ivory); overflow:hidden;}
+.hero-inner{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center; width:100%;}
+.hero h1{font-size:clamp(34px,5.4vw,64px); line-height:1.08; color:var(--ivory); max-width:640px;}
+.hero h1 em{font-style:normal; color:var(--gold-2); background:linear-gradient(120deg,var(--champagne),var(--gold)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+.hero p.lead{color:#D8D2C4; font-size:17.5px; max-width:520px; margin-top:20px;}
+.hero-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;}
+.hero-ticker{display:flex; gap:22px; margin-top:46px; flex-wrap:wrap; padding-top:26px; border-top:1px solid rgba(249,246,240,0.15);}
+.ticker-item{display:flex; flex-direction:column; gap:3px;}
+.ticker-item .k{font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:#B7AF9C;}
+.ticker-item .v{font-family:'Playfair Display',serif; font-size:19px; color:var(--gold-2);}
+.hero-art{position:relative; height:520px; display:flex; align-items:center; justify-content:center;}
+.hero-art svg{width:100%; max-width:420px; filter:drop-shadow(0 30px 60px rgba(212,175,55,0.25));}
+.orbit{animation:spin 34s linear infinite; transform-origin:210px 210px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.pulse{animation:pulse 3.2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:.55;}50%{opacity:1;}}
+
+/* Arch pattern used as recurring signature motif */
+
+/* ============ PREVIEW CARD GRIDS ============ */
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-6{grid-template-columns:repeat(6,1fr);}
+.coll-card,.serv-card{padding:30px; display:flex; flex-direction:column; gap:14px;}
+.coll-card h3,.serv-card h3{font-size:19px;}
+.coll-card .tag,.serv-tag{font-size:12px; letter-spacing:1.2px; text-transform:uppercase; color:var(--gold);}
+.coll-card a.wa{margin-top:auto; font-size:13.5px; font-weight:600; color:var(--emerald); display:inline-flex; align-items:center; gap:6px;}
+[data-theme="dark"] .coll-card a.wa{color:#4ED393;}
+
+/* Testimonials */
+.testi-card{padding:32px; display:flex; flex-direction:column; gap:16px;}
+.testi-stars{color:var(--gold); letter-spacing:3px; font-size:15px;}
+.testi-name{font-weight:600; font-size:14.5px; margin-top:6px;}
+.testi-role{font-size:12.5px; color:var(--text-soft);}
+
+/* Gallery */
+
+/* ============ PRICES DASHBOARD ============ */
+.currency-toggle{display:inline-flex; border:1px solid var(--border); border-radius:100px; padding:4px; gap:4px; background:var(--surface);}
+.currency-toggle button{border:none; background:transparent; padding:8px 18px; border-radius:100px; font-size:13.5px; font-weight:600; color:var(--text-soft);}
+.currency-toggle button.active{background:linear-gradient(135deg,var(--champagne),var(--gold)); color:#1A1A1A;}
+.dash-top{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:32px;}
+.live-dot{width:8px; height:8px; border-radius:50%; background:var(--up); display:inline-block; margin-right:7px; animation:blink 1.6s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.rate-card{padding:26px; display:flex; flex-direction:column; gap:12px;}
+.rate-card .karat{font-size:12.5px; letter-spacing:1.6px; text-transform:uppercase; color:var(--gold); font-weight:700;}
+.rate-card .price{font-family:'Playfair Display',serif; font-size:30px;}
+.rate-card .unit{font-size:12px; color:var(--text-soft);}
+.rate-card .change{font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:4px; width:fit-content; padding:3px 10px; border-radius:100px;}
+.change.up{color:var(--up); background:rgba(27,122,77,0.12);}
+.change.down{color:var(--down); background:rgba(179,64,43,0.12);}
+.rate-card .hl{display:flex; justify-content:space-between; font-size:12px; color:var(--text-soft); border-top:1px solid var(--border); padding-top:10px;}
+.spark{width:100%; height:44px;}
+.disclaimer{font-size:12.5px; color:var(--text-soft); margin-top:22px; padding:14px 18px; border:1px dashed var(--border); border-radius:var(--radius-sm);}
+
+/* Calculator */
+.calc{margin-top:56px; display:grid; grid-template-columns:1fr 1fr; gap:40px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:40px; box-shadow:var(--shadow);}
+.field{display:flex; flex-direction:column; gap:8px; margin-bottom:18px;}
+.field label{font-size:13px; font-weight:600;}
+.field input,.field select{padding:12px 14px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:14.5px;}
+.toggle-row{display:flex; align-items:center; gap:10px; font-size:13.5px;}
+.calc-result{background:var(--bg-alt); border-radius:var(--radius); padding:26px; align-self:start;}
+.calc-line{display:flex; justify-content:space-between; font-size:14.5px; padding:9px 0; border-bottom:1px solid var(--border);}
+.calc-line.total{font-weight:700; font-size:18px; border-bottom:none; font-family:'Playfair Display',serif;}
+
+/* Services / collections full grids */
+.serv-card svg,.coll-card svg{width:24px; height:24px;}
+
+/* About accordion */
+.about-wrap{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:start;}
+details.acc{border-bottom:1px solid var(--border); padding:18px 0;}
+details.acc summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-family:'Playfair Display',serif; font-size:19px;}
+details.acc summary::-webkit-details-marker{display:none;}
+details.acc summary::after{content:"+"; font-size:22px; color:var(--gold); transition:transform .3s ease;}
+details.acc[open] summary::after{content:"–";}
+details.acc p{margin-top:14px; font-size:15px;}
+.cert-row{display:flex; gap:14px; margin-top:22px; flex-wrap:wrap;}
+.owner-card{display:flex; align-items:center; gap:20px; margin-top:30px; padding:20px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); flex-wrap:wrap;}
+.owner-card img{width:92px; height:116px; object-fit:cover; object-position:top; border-radius:12px; box-shadow:0 0 0 2px var(--gold), 0 10px 24px -10px rgba(0,0,0,0.4); flex-shrink:0;}
+.owner-name{font-family:'Playfair Display',serif; font-size:21px;}
+.owner-role{font-size:13px; color:var(--gold); font-weight:600; margin-top:5px; letter-spacing:.3px;}
+.owner-since{font-size:12.5px; color:var(--text-soft); margin-top:5px;}
+.cert-badge{padding:10px 16px; border:1px solid var(--border); border-radius:100px; font-size:13px; font-weight:600; display:flex; align-items:center; gap:8px;}
+
+/* Contact */
+.contact-wrap{display:grid; grid-template-columns:.95fr 1.05fr; gap:40px;}
+.contact-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:34px; box-shadow:var(--shadow);}
+.contact-row{display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-bottom:1px solid var(--border);}
+.contact-row:last-child{border-bottom:none;}
+.contact-row .icon-badge{width:42px; height:42px; border-radius:11px;}
+.contact-row .icon-badge svg{width:20px; height:20px;}
+.contact-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:22px;}
+.map-frame{border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); position:relative; height:100%; min-height:340px;}
+.map-frame iframe{width:100%; height:100%; min-height:340px; border:0; filter:grayscale(.15) saturate(1.05);}
+.map-frame .map-cta{position:absolute; bottom:14px; left:14px; right:14px;}
+.form-card{margin-top:28px;}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+
+/* Footer */
+footer{background:var(--charcoal); color:#D8D2C4; padding:72px 0 26px;}
+.footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1.1fr; gap:40px;}
+footer h4{color:var(--ivory); font-size:15px; margin-bottom:16px; font-family:'Inter',sans-serif; font-weight:700; letter-spacing:.4px;}
+footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+footer a{font-size:14px; color:#B7AF9C;}
+footer a:hover{color:var(--gold-2);}
+.footer-social{display:flex; gap:12px; margin-top:18px;}
+.footer-social a{width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center;}
+.footer-social svg{width:16px; height:16px;}
+.footer-bottom{margin-top:52px; padding-top:22px; border-top:1px solid rgba(255,255,255,0.1); display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; font-size:13px; color:#8b8474;}
+.footer-bottom a{color:#8b8474;}
+.footer-bottom a:hover{color:var(--gold-2);}
+
+/* Legal modal */
+.modal-overlay{position:fixed; inset:0; background:rgba(20,19,17,.6); backdrop-filter:blur(4px); z-index:400; display:none; align-items:center; justify-content:center; padding:24px;}
+.modal-overlay.open{display:flex;}
+.modal-box{max-width:560px; max-height:80vh; overflow:auto; background:var(--surface); border-radius:var(--radius); padding:34px; box-shadow:var(--shadow); border:1px solid var(--border);}
+.modal-box h3{margin-bottom:14px;}
+.modal-box p{margin-bottom:12px; font-size:14.5px;}
+.modal-close{margin-top:20px;}
+
+/* ============ ALIYA AI ============ */
+.ai-fab{position:fixed; bottom:26px; right:26px; z-index:500; width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,var(--champagne),var(--gold) 60%,#8f7020); border:none; box-shadow:0 14px 34px -8px rgba(212,175,55,0.65); display:flex; align-items:center; justify-content:center; color:#1A1A1A;}
+.ai-fab svg{width:28px; height:28px;}
+.ai-fab::after{content:""; position:absolute; inset:-6px; border-radius:50%; border:2px solid var(--gold); opacity:.5; animation:ringpulse 2.4s ease-out infinite;}
+@keyframes ringpulse{0%{transform:scale(.9); opacity:.6;}100%{transform:scale(1.35); opacity:0;}}
+.ai-panel{position:fixed; bottom:104px; right:26px; width:380px; max-width:92vw; height:560px; max-height:75vh; background:var(--surface); border:1px solid var(--border); border-radius:20px; box-shadow:var(--shadow); z-index:500; display:none; flex-direction:column; overflow:hidden;}
+.ai-panel.open{display:flex;}
+.ai-head{background:linear-gradient(135deg,var(--forest),var(--charcoal)); color:var(--ivory); padding:18px 20px; display:flex; align-items:center; gap:12px;}
+.ai-head .mark{width:38px; height:38px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 1px rgba(212,175,55,0.5); flex-shrink:0;}
+.ai-head .ttl{font-family:'Playfair Display',serif; font-size:16px;}
+.ai-head .sub{font-size:11.5px; color:#C9C2B2;}
+.ai-head button{margin-left:auto; background:transparent; border:none; color:#D8D2C4; width:28px; height:28px;}
+.ai-body{flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:12px; background:var(--bg-alt);}
+.msg{max-width:82%; padding:11px 14px; border-radius:14px; font-size:13.8px; line-height:1.55;}
+.msg.bot{background:var(--surface); border:1px solid var(--border); align-self:flex-start; border-bottom-left-radius:4px;}
+.msg.user{background:linear-gradient(135deg,var(--champagne),var(--gold)); color:#1A1A1A; align-self:flex-end; border-bottom-right-radius:4px; font-weight:500;}
+.msg.typing{display:flex; gap:4px; align-items:center;}
+.msg.typing span{width:6px; height:6px; background:var(--text-soft); border-radius:50%; animation:typing 1.2s infinite ease-in-out;}
+.msg.typing span:nth-child(2){animation-delay:.2s;} .msg.typing span:nth-child(3){animation-delay:.4s;}
+@keyframes typing{0%,60%,100%{opacity:.3;}30%{opacity:1;}}
+.ai-quick{display:flex; gap:8px; flex-wrap:wrap; padding:12px 16px; border-top:1px solid var(--border); background:var(--surface);}
+.chip{font-size:12px; padding:7px 12px; border-radius:100px; border:1px solid var(--border); background:var(--bg); font-weight:600;}
+.chip:hover{border-color:var(--gold); color:var(--gold);}
+.ai-input{display:flex; gap:8px; padding:14px; border-top:1px solid var(--border); background:var(--surface);}
+.ai-input input{flex:1; border:1px solid var(--border); border-radius:100px; padding:11px 16px; background:var(--bg); color:var(--text); font-size:13.5px;}
+.ai-input button{width:42px; height:42px; border-radius:50%; border:none; background:linear-gradient(135deg,var(--champagne),var(--gold)); color:#1A1A1A; display:flex; align-items:center; justify-content:center;}
+.ai-input button svg{width:18px; height:18px;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-art{height:340px; order:-1;}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+  .grid-4{grid-template-columns:repeat(2,1fr);}
+  .grid-6{grid-template-columns:repeat(2,1fr);}
+  .about-wrap,.contact-wrap,.calc{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr; gap:32px;}
+}
+@media (max-width:560px){
+  .grid-3,.grid-4,.grid-6{grid-template-columns:1fr 1fr;}
+  .section-pad{padding:70px 0;}
+  .footer-grid{grid-template-columns:1fr;}
+  .ai-panel{right:10px; bottom:96px; width:94vw;}
+  .form-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="particles" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Aliya Jewels home">
+      <img src="logo.png" alt="" class="mark" aria-hidden="true" /> Aliya Jewels
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#prices">Live Gold Prices</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search the site">
+        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <a class="nav-whatsapp" href="https://wa.me/971502825414" target="_blank" rel="noopener" aria-label="Chat on WhatsApp +971 50 282 5414">
+        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.35.63 4.55 1.73 6.45L4 29l7.72-1.68a12 12 0 0 0 4.3.8c6.62 0 12-5.4 12-12S22.64 3 16.02 3zm7.06 17.3c-.3.84-1.7 1.6-2.34 1.7-.6.1-1.36.14-2.2-.14-.5-.16-1.15-.37-1.98-.73-3.5-1.5-5.78-5.03-5.96-5.27-.17-.24-1.42-1.9-1.42-3.6s.9-2.55 1.22-2.9c.3-.34.68-.42.9-.42h.65c.2 0 .49-.04.76.58.3.7 1 2.4 1.08 2.58.08.17.14.37.02.6-.1.24-.16.38-.32.58-.16.2-.34.44-.48.6-.16.16-.32.34-.14.66.17.32.78 1.3 1.68 2.1 1.15 1.04 2.13 1.36 2.44 1.52.32.16.5.14.68-.08.2-.22.8-.94 1.02-1.26.2-.32.42-.26.7-.16.28.1 1.78.84 2.08 1 .3.14.5.22.58.34.08.14.08.78-.22 1.6z"/></svg>
+        +971 50 282 5414
+      </a>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="none" width="18" height="18" id="themeIcon"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#prices">Live Gold Prices</a>
+    <a href="#collections">Collections</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="search-overlay" id="searchOverlay">
+  <div>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style="color:var(--gold)"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search gold prices, services, collections…" autocomplete="off" />
+    </div>
+    <p class="search-hint">Try “22K price”, “custom jewellery”, “certification”, or “contact”</p>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ HOME / HERO ============ -->
+<section id="home" class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow">Gold Souk · Deira · Dubai</div>
+      <h1><em>Aliya</em> Jewels.</h1>
+      <p class="lead">From the heart of Deira's Gold Souk, Aliya Jewels pairs disciplined bullion trading with master craftsmanship — gold you can trade with confidence, jewelry you'll treasure for generations.</p>
+      <div class="hero-ctas">
+        <a href="#prices" class="btn btn-gold">View Live Gold Prices</a>
+        <a href="#contact" class="btn btn-outline" id="sellGoldHero">Sell Your Gold</a>
+        <button class="btn btn-outline" id="chatHeroBtn">Chat with Aliya AI</button>
+      </div>
+      <div class="hero-ticker" id="heroTicker" aria-live="polite"></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 420">
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#0F5E4A" stroke-width="1.2" stroke-dasharray="1 9" opacity="0.6"/>
+        <g class="orbit">
+          <circle cx="210" cy="210" r="170" fill="none" stroke="url(#ringGrad)" stroke-width="1.4" stroke-dasharray="2 10"/>
+        </g>
+        <defs>
+          <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#F3D58A"/><stop offset="100%" stop-color="#D4AF37"/>
+          </linearGradient>
+          <linearGradient id="gemGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#F3D58A"/><stop offset="60%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#8f7020"/>
+          </linearGradient>
+        </defs>
+        <g class="pulse">
+          <polygon points="160,150 95,205 210,330 325,205 260,150" fill="url(#gemGrad)" opacity="0.08" stroke="url(#gemGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="95" y1="205" x2="325" y2="205" stroke="url(#gemGrad)" stroke-width="1.2"/>
+          <line x1="210" y1="150" x2="210" y2="330" stroke="url(#gemGrad)" stroke-width="1"/>
+          <line x1="160" y1="150" x2="210" y2="205" stroke="url(#gemGrad)" stroke-width="1"/>
+          <line x1="260" y1="150" x2="210" y2="205" stroke="url(#gemGrad)" stroke-width="1"/>
+          <line x1="95" y1="205" x2="160" y2="270" stroke="url(#gemGrad)" stroke-width="0.8" opacity="0.7"/>
+          <line x1="325" y1="205" x2="260" y2="270" stroke="url(#gemGrad)" stroke-width="0.8" opacity="0.7"/>
+          <path d="M188 118l6 16 16 6-16 6-6 16-6-16-16-6 16-6z" fill="url(#gemGrad)" opacity="0.85"/>
+          <path d="M298 250l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="url(#gemGrad)" opacity="0.6"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Featured collections preview -->
+<section class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Featured</div>
+      <h2>Collections worth trading up for</h2>
+      <p>A curated cross-section of what moves through our counters every day — from investment bullion to bespoke pieces.</p>
+    </div>
+    <div class="grid grid-4" id="featuredCollections"></div>
+  </div>
+</section>
+
+<!-- Services preview -->
+<section class="section-pad" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Trading counter &amp; workshop, under one roof</h2>
+      <p>Certified buying and selling alongside full in-house manufacturing — diamond setting, engraving, plating, repair.</p>
+    </div>
+    <div class="grid grid-3" id="featuredServices"></div>
+    <div style="text-align:center; margin-top:36px;"><a href="#services" class="btn btn-ghost">View all 13 services</a></div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Client trust</div>
+      <h2>Why Dubai keeps coming back to Deira</h2>
+    </div>
+    <div class="grid grid-3" id="testimonials"></div>
+  </div>
+</section>
+
+<!-- Contact preview -->
+<section class="section-pad" style="background:linear-gradient(135deg,var(--forest),var(--charcoal)); color:var(--ivory);">
+  <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px;">
+    <div>
+      <div class="eyebrow">Visit us</div>
+      <h2 style="color:var(--ivory);">Gold Souk, Deira — Gate No. 2</h2>
+      <p style="color:#C9C2B2; margin-top:10px;">Near Blue Sky Way Hotel, Dubai, UAE</p>
+    </div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="https://wa.me/971502825414" target="_blank" rel="noopener" class="btn btn-gold">WhatsApp Us</a>
+      <a href="#contact" class="btn btn-outline">Full Contact Details</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE GOLD PRICES ============ -->
+<section id="prices" class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <div class="dash-top">
+      <div>
+        <div class="eyebrow"><span class="live-dot"></span>Live Dashboard</div>
+        <h2>Live Gold Prices</h2>
+      </div>
+      <div class="currency-toggle" role="group" aria-label="Currency selector">
+        <button class="active" data-cur="AED" id="curAED">AED</button>
+        <button data-cur="USD" id="curUSD">USD</button>
+      </div>
+    </div>
+    <div class="grid grid-4" id="rateCards" style="grid-template-columns:repeat(5,1fr);"></div>
+    <p class="disclaimer">Rates above are indicative demo figures that simulate live market movement for this preview, refreshing every 30 seconds. Connect a live bullion price feed (for example a gold price API) to power this dashboard with real-time Dubai Gold Souk rates.</p>
+
+    <div class="calc" id="calculator">
+      <div>
+        <div class="eyebrow">Gold Calculator</div>
+        <h3 class="font-display" style="font-size:22px; margin-bottom:22px;">What's it worth?</h3>
+        <div class="field">
+          <label for="calcWeight">Weight (grams)</label>
+          <input type="number" id="calcWeight" min="0" step="0.01" value="10" />
+        </div>
+        <div class="field">
+          <label for="calcPurity">Purity</label>
+          <select id="calcPurity">
+            <option value="24">24K (999.9)</option>
+            <option value="22" selected>22K (916)</option>
+            <option value="21">21K (875)</option>
+            <option value="18">18K (750)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="calcMaking">Making charges</label>
+          <input type="number" id="calcMaking" min="0" step="0.01" value="25" />
+          <div class="toggle-row">
+            <input type="checkbox" id="makingIsPercent" />
+            <label for="makingIsPercent">Charge as % of gold value instead of flat AED</label>
+          </div>
+        </div>
+        <div class="toggle-row">
+          <input type="checkbox" id="vatToggle" checked />
+          <label for="vatToggle">Add 5% VAT (UAE)</label>
+        </div>
+      </div>
+      <div class="calc-result" id="calcResult" aria-live="polite">
+        <div class="calc-line"><span>Gold value</span><span id="rGold">—</span></div>
+        <div class="calc-line"><span>Making charges</span><span id="rMaking">—</span></div>
+        <div class="calc-line"><span>Subtotal</span><span id="rSub">—</span></div>
+        <div class="calc-line"><span>VAT (5%)</span><span id="rVat">—</span></div>
+        <div class="calc-line total"><span>Total</span><span id="rTotal">—</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLLECTIONS ============ -->
+<section id="collections" class="section-pad" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Explore</div>
+      <h2>Our Collections</h2>
+      <p>Six ways to hold, wear, or grow your gold — each backed by transparent weighing and certified purity.</p>
+    </div>
+    <div class="grid grid-3" id="collectionsFull"></div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Capabilities</div>
+      <h2>Services</h2>
+      <p>Everything from trading counter to workshop bench, delivered by craftsmen who have worked gold for their whole careers.</p>
+    </div>
+    <div class="grid grid-4" id="servicesFull"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section-pad" style="background:var(--bg-alt);">
+  <div class="container about-wrap">
+    <div>
+      <div class="eyebrow">Our House</div>
+      <h2>Craft, trust, and provenance</h2>
+      <p style="margin-top:16px;">Aliya Jewels L.L.C. trades and manufactures gold from Dubai's historic Gold Souk in Deira — a marketplace built on transparent weighing, fair rates, and a handshake that still means something.</p>
+      <div class="cert-row">
+        <span class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" fill="currentColor"/></svg> GIA Certified Diamonds</span>
+        <span class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" fill="currentColor"/></svg> HRD Certified</span>
+        <span class="cert-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="color:var(--gold)"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" fill="currentColor"/></svg> IGI Certified</span>
+      </div>
+      <div class="owner-card">
+        <img src="kabeer.png" alt="Kabeer, owner and gemstone specialist at Aliya Jewels" />
+        <div>
+          <div class="owner-name">Kabeer</div>
+          <div class="owner-role">Gemstone Specialist · Owner</div>
+          <div class="owner-since">Since 2002</div>
+        </div>
+      </div>
+    </div>
+    <div id="aboutAccordion"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Visit, call, or message us</h2>
+      <p>We're on the trading floor of the Gold Souk every day — walk in, or reach us instantly on WhatsApp.</p>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-card">
+        <div class="contact-row">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <div>
+            <strong>Aliya Jewels L.L.C.</strong>
+            <p id="fullAddress">Gold Souk, Deira, Gate No. 2, Near Blue Sky Way Hotel, Dubai, UAE</p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M3 5.5c0-1 .8-1.5 1.5-1.5H8l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3.5c0 .8-.7 1.5-1.5 1.5C9.5 20 3 13.5 3 5.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <div>
+            <strong>WhatsApp</strong>
+            <p><a href="https://wa.me/971502825414" target="_blank" rel="noopener">+971 50 282 5414</a> · <a href="https://wa.me/971567233576" target="_blank" rel="noopener">+971 56 723 3576</a></p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v14H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 6l8 7 8-7" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div>
+            <strong>Office</strong>
+            <p><a href="tel:+97143525303">+971 4 352 5303</a></p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v14H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 6l8 7 8-7" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <div>
+            <strong>Email</strong>
+            <p><a href="mailto:Kabeeraliyajewels56@gmail.com">Kabeeraliyajewels56@gmail.com</a><br/><a href="mailto:info@aliyajewels.com">info@aliyajewels.com</a></p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></div>
+          <div>
+            <strong>Instagram</strong>
+            <p><a href="https://www.instagram.com/aliya_jewels_llc" target="_blank" rel="noopener">@aliya_jewels_llc</a></p>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="https://wa.me/971502825414" target="_blank" rel="noopener" class="btn btn-gold">WhatsApp</a>
+          <a href="tel:+97143525303" class="btn btn-outline on-light">Call</a>
+          <a href="mailto:info@aliyajewels.com" class="btn btn-outline on-light">Email</a>
+          <a href="https://maps.app.goo.gl/XqxcAcpfMr5CEksz5?g_st=ic" target="_blank" rel="noopener" class="btn btn-outline on-light">Get Directions</a>
+        </div>
+
+        <form class="form-card" id="contactForm">
+          <div class="form-row">
+            <div class="field"><label for="cfName">Name</label><input id="cfName" required /></div>
+            <div class="field"><label for="cfEmail">Email</label><input id="cfEmail" type="email" required /></div>
+          </div>
+          <div class="field"><label for="cfMsg">Message</label><input id="cfMsg" required placeholder="Tell us what you're looking for…" /></div>
+          <button class="btn btn-gold" type="submit">Send Message</button>
+          <p style="font-size:12px; margin-top:10px;">Opens your email app with this message pre-filled to info@aliyajewels.com.</p>
+        </form>
+      </div>
+
+      <a class="map-frame" href="https://maps.app.goo.gl/XqxcAcpfMr5CEksz5?g_st=ic" target="_blank" rel="noopener" aria-label="Open Aliya Jewels location in Google Maps">
+        <iframe title="Aliya Jewels location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Gold+Souk+Deira+Gate+No+2+Near+Blue+Sky+Way+Hotel+Dubai&output=embed"></iframe>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="logo" style="color:var(--ivory);"><img src="logo.png" alt="" class="mark" /> Aliya Jewels</div>
+      <p style="margin-top:16px; max-width:280px; color:#B7AF9C;">Trusted gold trading, bullion dealing, and custom jewelry manufacturing from Dubai's Gold Souk, Deira.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/971502825414" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="#D4AF37"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.35.63 4.55 1.73 6.45L4 29l7.72-1.68a12 12 0 0 0 4.3.8c6.62 0 12-5.4 12-12S22.64 3 16.02 3z"/></svg></a>
+        <a href="https://www.instagram.com/aliya_jewels_llc" target="_blank" rel="noopener" aria-label="Instagram @aliya_jewels_llc"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.6"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h3l1-3h-4V9c0-.5.5-1 1-1z"/></svg></a>
+      </div>
+      <a href="https://www.instagram.com/aliya_jewels_llc" target="_blank" rel="noopener" style="display:inline-block; margin-top:12px; font-size:13px; color:#B7AF9C;">@aliya_jewels_llc</a>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#prices">Live Gold Prices</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul id="footerServices"></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Gold Souk, Deira, Gate No. 2</li>
+        <li>Near Blue Sky Way Hotel, Dubai</li>
+        <li><a href="tel:+97143525303">+971 4 352 5303</a></li>
+        <li><a href="mailto:info@aliyajewels.com">info@aliyajewels.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Aliya Jewels L.L.C. All rights reserved.</span>
+    <span>
+      <a href="#" id="privacyLink">Privacy Policy</a> · <a href="#" id="termsLink">Terms &amp; Conditions</a>
+    </span>
+  </div>
+</footer>
+
+<!-- Legal modal -->
+<div class="modal-overlay" id="legalModal">
+  <div class="modal-box">
+    <h3 id="legalTitle">Privacy Policy</h3>
+    <p id="legalBody"></p>
+    <button class="btn btn-ghost modal-close" id="legalClose">Close</button>
+  </div>
+</div>
+
+<!-- ============ ALIYA AI ============ -->
+<button class="ai-fab" id="aiFab" aria-label="Chat with Aliya AI">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z" fill="currentColor"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14z" fill="currentColor"/></svg>
+</button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="Aliya AI assistant">
+  <div class="ai-head">
+    <img src="logo.png" alt="" class="mark" />
+    <div>
+      <div class="ttl">Aliya AI</div>
+      <div class="sub">Your gold &amp; jewelry concierge</div>
+    </div>
+    <button id="aiClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="ai-body" id="aiBody"></div>
+  <div class="ai-quick" id="aiQuick">
+    <button class="chip" data-q="rate">Today's Gold Rate</button>
+    <button class="chip" data-q="calc">Gold Calculator</button>
+    <button class="chip" data-q="sell">Sell My Gold</button>
+    <button class="chip" data-q="appt">Book Appointment</button>
+    <button class="chip" data-q="wa">WhatsApp Us</button>
+  </div>
+  <form class="ai-input" id="aiForm">
+    <input type="text" id="aiInput" placeholder="Ask about gold rates, purity, jewelry…" autocomplete="off" />
+    <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l16-7-6 16-2-7-8-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+  </form>
+</div>
+
+<script>
+/* ================= SVG ICON LIBRARY ================= */
+const ICONS = {
+  ring:'<path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" stroke="currentColor" stroke-width="1.7"/><path d="M9.5 6L12 2l2.5 4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>',
+  custom:'<path d="M14.5 3l6.5 6.5-11 11L3 17l11.5-14z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14.5 3l3 3" stroke="currentColor" stroke-width="1.7"/>',
+  bar:'<rect x="3" y="9" width="18" height="8" rx="1" stroke="currentColor" stroke-width="1.7"/><path d="M6 9l2-3h8l2 3" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>',
+  coin:'<circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 8v8M9.5 10a2.5 2 0 0 1 5 0c0 2-5 1.8-5 3.6a2.5 2 0 0 0 5 0" stroke="currentColor" stroke-width="1.4"/>',
+  vault:'<rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r=".8" fill="currentColor"/>',
+  scrap:'<path d="M4 5l16 14M20 5L4 19" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.2" opacity=".5"/>',
+  buy:'<path d="M3 6h2l1.5 9h11L20 9H7" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9.5" cy="19" r="1.4" fill="currentColor"/><circle cx="16" cy="19" r="1.4" fill="currentColor"/>',
+  sell:'<path d="M3 12l7-7 8 8-7 7-8-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="9" cy="9" r="1.1" fill="currentColor"/>',
+  trade:'<path d="M4 7h13M12 3l5 4-5 4M20 17H7M12 21l-5-4 5-4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
+  diamond:'<path d="M4 9l4-6h8l4 6-8 12-8-12z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 9h16M8 3l2 6-2 12M16 3l-2 6 2 12" stroke="currentColor" stroke-width="1.2"/>',
+  manufacture:'<path d="M4 20h16M6 20l1-8 5-3 5 3 1 8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="7" r="2.4" stroke="currentColor" stroke-width="1.6"/>',
+  plating:'<circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M6 12a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 3"/>',
+  laser:'<path d="M3 20l7-7M12 5l7 7-9 9-4-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 2l2 2-2 2-2-2z" fill="currentColor"/>',
+  stamp:'<rect x="6" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 17h6M8 20h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+  enamel:'<path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10z" stroke="currentColor" stroke-width="1.6"/>',
+  repair:'<path d="M14.5 6.5a3.5 3.5 0 0 1-4.7 4.7L4 17l3 3 5.8-5.8a3.5 3.5 0 0 1 4.7-4.7l-3 3-2-2 3-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  cert:'<path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>'
+};
+function icon(name){ return `<svg viewBox="0 0 24 24" fill="none">${ICONS[name]||ICONS.ring}</svg>`; }
+
+/* ================= DATA ================= */
+const collections = [
+  {t:'Gold Jewelry', d:'Rings, necklaces, bangles and sets in 22K &amp; 18K, priced transparently by weight.', icon:'ring'},
+  {t:'Custom Jewelry', d:'Bring a sketch, a photo, or an idea — our workshop designs and manufactures it in-house.', icon:'custom'},
+  {t:'Gold Bars', d:'Assayed bars in a range of weights for straightforward, verifiable investment.', icon:'bar'},
+  {t:'Gold Coins', d:'Recognised sovereign and bullion coins, bought and sold at transparent spot-linked rates.', icon:'coin'},
+  {t:'Investment Bullion', d:'Larger-format bullion holdings for serious accumulation, with certification on request.', icon:'vault'},
+  {t:'Scrap Gold', d:'Fair, weight-and-purity-based valuation for broken or unwanted gold — paid on the spot.', icon:'scrap'}
+];
+const services = [
+  {t:'Gold Buying', d:'Instant, transparent valuation and same-day payment.', icon:'buy'},
+  {t:'Gold Selling', d:'Certified jewelry and bullion at fair market rates.', icon:'sell'},
+  {t:'Bullion Trading', d:'Bars and coins traded at live spot-linked pricing.', icon:'trade'},
+  {t:'Gold Scrap', d:'Weight and purity assessed on the spot, no guesswork.', icon:'scrap'},
+  {t:'Diamond Setting', d:'Precision setting for GIA / HRD / IGI certified stones.', icon:'diamond'},
+  {t:'Jewellery Manufacturing', d:'Full in-house production from raw gold to finished piece.', icon:'manufacture'},
+  {t:'Custom Jewellery', d:'Bespoke designs built around your idea or reference.', icon:'custom'},
+  {t:'Gold Plating', d:'Rhodium and gold plating to refresh or refinish pieces.', icon:'plating'},
+  {t:'Laser Engraving', d:'Fine detail engraving for names, dates and motifs.', icon:'laser'},
+  {t:'Laser Stamping', d:'Precise hallmarking and purity stamping.', icon:'stamp'},
+  {t:'Colour Enameling', d:'Vitreous colour work for statement and heritage pieces.', icon:'enamel'},
+  {t:'Jewellery Repair', d:'Resizing, re-stringing, clasp and prong repair.', icon:'repair'},
+  {t:'Certification', d:'GIA, HRD and IGI certified diamond documentation.', icon:'cert'}
+];
+const testimonials = [
+  {q:'Weighed and valued my scrap gold in minutes, right in front of me — no pressure, fair number.', n:'A. Khan', r:'Deira, Dubai'},
+  {q:'They manufactured my wedding set from a single reference photo. The finishing is museum-quality.', n:'S. Fernandes', r:'Custom jewellery client'},
+  {q:'I buy bullion here monthly. Rates track spot closely and the paperwork is always clean.', n:'R. Al Marzooqi', r:'Investment client'}
+];
+const aboutSections = [
+  {t:'Our Story', b:'Aliya Jewels L.L.C. trades from the Dubai Gold Souk in Deira, one of the world\'s most established gold markets — built on daily trading discipline and a workshop that manufactures as much as it sells.'},
+  {t:'Mission', b:'To make gold trading transparent and jewelry craftsmanship personal — every gram weighed openly, every custom piece built to last.'},
+  {t:'Vision', b:'To be Dubai\'s most trusted name for both investment-grade bullion and heirloom-quality jewelry, recognised for fairness and finish.'},
+  {t:'Craftsmanship', b:'Our workshop handles setting, manufacturing, engraving, plating and enameling in-house, so every custom order stays under one roof from sketch to final polish.'},
+  {t:'Ethical Sourcing', b:'We source gold and diamonds through traceable, compliant channels and support responsible trading practices throughout the supply chain.'},
+  {t:'Certified Diamonds', b:'We work with GIA, HRD and IGI certified diamonds, so every stone we set comes with independently verified grading.'}
+];
+
+/* ================= RENDER STATIC CONTENT ================= */
+function renderCards(arr, container, cls, ctaWa){
+  const el = document.getElementById(container);
+  el.innerHTML = arr.map(x => `
+    <div class="card ${cls}">
+      <div class="icon-badge">${icon(x.icon)}</div>
+      <h3>${x.t}</h3>
+      <p>${x.d}</p>
+      ${ctaWa ? `<a class="wa" href="https://wa.me/971502825414?text=${encodeURIComponent('Hi, I would like to enquire about '+x.t)}" target="_blank" rel="noopener">Enquire on WhatsApp →</a>` : ''}
+    </div>`).join('');
+}
+renderCards(collections.slice(0,4), 'featuredCollections', 'coll-card', true);
+renderCards(services.slice(0,3), 'featuredServices', 'serv-card', false);
+renderCards(collections, 'collectionsFull', 'coll-card', true);
+renderCards(services, 'servicesFull', 'serv-card', false);
+
+document.getElementById('testimonials').innerHTML = testimonials.map(t => `
+  <div class="card testi-card">
+    <div class="testi-stars">★★★★★</div>
+    <p>&ldquo;${t.q}&rdquo;</p>
+    <div class="testi-name">${t.n}</div>
+    <div class="testi-role">${t.r}</div>
+  </div>`).join('');
+
+document.getElementById('aboutAccordion').innerHTML = aboutSections.map((a,i) => `
+  <details class="acc" ${i===0?'open':''}>
+    <summary>${a.t}</summary>
+    <p>${a.b}</p>
+  </details>`).join('');
+
+document.getElementById('footerServices').innerHTML = services.slice(0,6).map(s => `<li><a href="#services">${s.t}</a></li>`).join('');
+
+/* Particles */
+const pWrap = document.getElementById('particles');
+for(let i=0;i<28;i++){
+  const s = document.createElement('div');
+  s.className='particle';
+  const size = 2+Math.random()*5;
+  s.style.width=s.style.height=size+'px';
+  s.style.left = Math.random()*100+'vw';
+  s.style.top = 100+Math.random()*20+'vh';
+  s.style.animationDuration = (14+Math.random()*18)+'s';
+  s.style.animationDelay = (Math.random()*14)+'s';
+  pWrap.appendChild(s);
+}
+
+/* ================= GOLD RATES SIMULATION ================= */
+const AED_PER_USD = 3.6725;
+const OZ_TO_G = 31.1035;
+let spotUsdOz = 4064.93; // simulated baseline seeded from current market spot, not a live feed
+const karats = {24:1, 22:22/24, 21:21/24, 18:18/24};
+let currency = 'AED';
+const rateState = {};
+['24','22','21','18'].forEach(k=>{
+  const base = (spotUsdOz/OZ_TO_G)*AED_PER_USD*karats[k];
+  rateState[k] = {price:base, open:base, high:base, low:base, hist:Array(20).fill(base)};
+});
+rateState['spot'] = {price:spotUsdOz, open:spotUsdOz, high:spotUsdOz, low:spotUsdOz, hist:Array(20).fill(spotUsdOz)};
+
+function fmt(n, cur){
+  return (cur==='USD' ? '$' : 'AED ') + n.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+function sparkPoints(hist){
+  const min = Math.min(...hist), max = Math.max(...hist);
+  const range = (max-min)||1;
+  return hist.map((v,i)=>{
+    const x = (i/(hist.length-1))*100;
+    const y = 34 - ((v-min)/range)*30 - 2;
+    return `${x},${y}`;
+  }).join(' ');
+}
+function renderRates(){
+  const cards = ['24','22','21','18','spot'];
+  document.getElementById('rateCards').innerHTML = cards.map(k=>{
+    const s = rateState[k];
+    const isSpot = k==='spot';
+    const priceDisplay = isSpot
+      ? (currency==='AED' ? fmt(s.price*AED_PER_USD,'AED') : fmt(s.price,'USD'))
+      : (currency==='AED' ? fmt(s.price,'AED') : fmt(s.price/AED_PER_USD,'USD'));
+    const change = ((s.price-s.open)/s.open*100);
+    const up = change>=0;
+    const unit = isSpot ? 'per troy ounce' : 'per gram';
+    const highD = isSpot ? (currency==='AED'? fmt(s.high*AED_PER_USD,'AED'): fmt(s.high,'USD')) : (currency==='AED'? fmt(s.high,'AED'): fmt(s.high/AED_PER_USD,'USD'));
+    const lowD = isSpot ? (currency==='AED'? fmt(s.low*AED_PER_USD,'AED'): fmt(s.low,'USD')) : (currency==='AED'? fmt(s.low,'AED'): fmt(s.low/AED_PER_USD,'USD'));
+    return `
+    <div class="card rate-card">
+      <div class="karat">${isSpot?'Gold Spot':k+'K Gold'}</div>
+      <div class="price">${priceDisplay}</div>
+      <div class="unit">${unit} · ${currency}</div>
+      <span class="change ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(change).toFixed(2)}%</span>
+      <svg class="spark" viewBox="0 0 100 34" preserveAspectRatio="none"><polyline points="${sparkPoints(s.hist)}" fill="none" stroke="${up?'var(--up)':'var(--down)'}" stroke-width="1.6"/></svg>
+      <div class="hl"><span>High ${highD}</span><span>Low ${lowD}</span></div>
+    </div>`;
+  }).join('');
+}
+function renderTicker(){
+  document.getElementById('heroTicker').innerHTML = ['24','22','21','18'].map(k=>{
+    const s = rateState[k];
+    const v = currency==='AED'? fmt(s.price,'AED') : fmt(s.price/AED_PER_USD,'USD');
+    return `<div class="ticker-item"><span class="k">${k}K / g</span><span class="v">${v}</span></div>`;
+  }).join('');
+}
+function tickRates(){
+  // Only the spot price does the actual random walk each tick.
+  const drift = (Math.random()-0.5) * spotUsdOz * 0.0018;
+  spotUsdOz = Math.max(1, spotUsdOz + drift);
+
+  const spotState = rateState['spot'];
+  spotState.price = spotUsdOz;
+  spotState.high = Math.max(spotState.high, spotUsdOz);
+  spotState.low = Math.min(spotState.low, spotUsdOz);
+  spotState.hist.push(spotUsdOz); spotState.hist.shift();
+
+  // Every karat is always derived from the same spot price, so 24K > 22K > 21K > 18K
+  // holds exactly and all four move together, matching how gold is actually priced.
+  ['24','22','21','18'].forEach(k=>{
+    const s = rateState[k];
+    const price = (spotUsdOz/OZ_TO_G)*AED_PER_USD*karats[k];
+    s.price = price;
+    s.high = Math.max(s.high, price);
+    s.low = Math.min(s.low, price);
+    s.hist.push(price); s.hist.shift();
+  });
+
+  renderRates(); renderTicker(); updateCalc();
+}
+renderRates(); renderTicker();
+setInterval(tickRates, 30000);
+
+document.getElementById('curAED').addEventListener('click', ()=>{currency='AED'; document.getElementById('curAED').classList.add('active'); document.getElementById('curUSD').classList.remove('active'); renderRates(); renderTicker(); updateCalc();});
+document.getElementById('curUSD').addEventListener('click', ()=>{currency='USD'; document.getElementById('curUSD').classList.add('active'); document.getElementById('curAED').classList.remove('active'); renderRates(); renderTicker(); updateCalc();});
+
+/* ================= CALCULATOR ================= */
+function updateCalc(){
+  const weight = parseFloat(document.getElementById('calcWeight').value)||0;
+  const karat = document.getElementById('calcPurity').value;
+  const making = parseFloat(document.getElementById('calcMaking').value)||0;
+  const isPct = document.getElementById('makingIsPercent').checked;
+  const vatOn = document.getElementById('vatToggle').checked;
+  const pricePerGramAED = rateState[karat].price;
+  const goldValue = pricePerGramAED * weight;
+  const makingCharge = isPct ? goldValue*(making/100) : making;
+  const subtotal = goldValue + makingCharge;
+  const vat = vatOn ? subtotal*0.05 : 0;
+  const total = subtotal + vat;
+  document.getElementById('rGold').textContent = fmt(currency==='AED'?goldValue:goldValue/AED_PER_USD, currency);
+  document.getElementById('rMaking').textContent = fmt(currency==='AED'?makingCharge:makingCharge/AED_PER_USD, currency);
+  document.getElementById('rSub').textContent = fmt(currency==='AED'?subtotal:subtotal/AED_PER_USD, currency);
+  document.getElementById('rVat').textContent = fmt(currency==='AED'?vat:vat/AED_PER_USD, currency);
+  document.getElementById('rTotal').textContent = fmt(currency==='AED'?total:total/AED_PER_USD, currency);
+}
+['calcWeight','calcPurity','calcMaking','makingIsPercent','vatToggle'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', updateCalc);
+});
+updateCalc();
+
+/* ================= NAV / SCROLLSPY / MOBILE MENU ================= */
+const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+const sections = ['home','prices','collections','services','about','contact'].map(id=>document.getElementById(id));
+function onScroll(){
+  let current = sections[0].id;
+  sections.forEach(s=>{ if(window.scrollY >= s.offsetTop - 140) current = s.id; });
+  navLinks.forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('href') === '#'+current && a.closest('.nav-links'));
+  });
+}
+document.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburgerBtn.addEventListener('click', ()=>{
+  const open = mobileMenu.classList.toggle('open');
+  hamburgerBtn.setAttribute('aria-expanded', open);
+});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>mobileMenu.classList.remove('open')));
+
+/* Theme toggle */
+const themeBtn = document.getElementById('themeBtn');
+const themeIcon = document.getElementById('themeIcon');
+const ICON_MOON = '<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>';
+const ICON_SUN = '<circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.4M12 19.1v2.4M21.5 12h-2.4M4.9 12H2.5M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7M18.4 18.4l-1.7-1.7M7.3 7.3 5.6 5.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+function syncThemeIcon(){
+  const isDark = document.documentElement.getAttribute('data-theme')==='dark';
+  themeIcon.innerHTML = isDark ? ICON_SUN : ICON_MOON;
+  themeBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+}
+themeBtn.addEventListener('click', ()=>{
+  const html = document.documentElement;
+  html.setAttribute('data-theme', html.getAttribute('data-theme')==='dark' ? 'light' : 'dark');
+  syncThemeIcon();
+});
+syncThemeIcon();
+
+/* Search overlay */
+const searchOverlay = document.getElementById('searchOverlay');
+document.getElementById('searchBtn').addEventListener('click', ()=>{ searchOverlay.classList.add('open'); document.getElementById('searchInput').focus(); });
+searchOverlay.addEventListener('click', (e)=>{ if(e.target===searchOverlay) searchOverlay.classList.remove('open'); });
+const searchMap = {
+  'gold':'prices','rate':'prices','price':'prices','24k':'prices','22k':'prices','calculator':'prices',
+  'collection':'collections','jewelry':'collections','jewellery':'collections','bullion':'collections','coin':'collections','bar':'collections',
+  'service':'services','engraving':'services','plating':'services','repair':'services','certification':'services','diamond':'services',
+  'about':'about','story':'about','mission':'about','vision':'about',
+  'contact':'contact','address':'contact','location':'contact','map':'contact','whatsapp':'contact'
+};
+document.getElementById('searchInput').addEventListener('keydown', (e)=>{
+  if(e.key==='Enter'){
+    const q = e.target.value.toLowerCase();
+    let target = 'home';
+    for(const key in searchMap){ if(q.includes(key)){ target = searchMap[key]; break; } }
+    document.getElementById(target).scrollIntoView({behavior:'smooth'});
+    searchOverlay.classList.remove('open');
+    e.target.value='';
+  }
+  if(e.key==='Escape') searchOverlay.classList.remove('open');
+});
+
+/* Legal modal */
+const legalModal = document.getElementById('legalModal');
+const legalTexts = {
+  privacy: {title:'Privacy Policy', body:'Aliya Jewels L.L.C. collects only the information needed to respond to enquiries, process transactions, and improve this website (including basic analytics). We do not sell personal data to third parties. Contact info@aliyajewels.com for any data request. Replace this placeholder with counsel-approved policy text before publishing.'},
+  terms: {title:'Terms &amp; Conditions', body:'All gold and jewelry transactions are subject to same-day weighing, purity verification, and prevailing market rates at the time of sale. Custom orders require a deposit; timelines vary by design complexity. Replace this placeholder with counsel-approved terms before publishing.'}
+};
+function openLegal(kind){
+  document.getElementById('legalTitle').innerHTML = legalTexts[kind].title;
+  document.getElementById('legalBody').innerHTML = legalTexts[kind].body;
+  legalModal.classList.add('open');
+}
+document.getElementById('privacyLink').addEventListener('click', e=>{e.preventDefault(); openLegal('privacy');});
+document.getElementById('termsLink').addEventListener('click', e=>{e.preventDefault(); openLegal('terms');});
+document.getElementById('legalClose').addEventListener('click', ()=>legalModal.classList.remove('open'));
+legalModal.addEventListener('click', e=>{ if(e.target===legalModal) legalModal.classList.remove('open'); });
+
+/* Contact form -> mailto fallback */
+document.getElementById('contactForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const name = document.getElementById('cfName').value;
+  const email = document.getElementById('cfEmail').value;
+  const msg = document.getElementById('cfMsg').value;
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`);
+  window.location.href = `mailto:info@aliyajewels.com?subject=${encodeURIComponent('Website enquiry from '+name)}&body=${body}`;
+});
+
+/* Year */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ================= ALIYA AI CHAT ================= */
+const aiFab = document.getElementById('aiFab');
+const aiPanel = document.getElementById('aiPanel');
+const aiBody = document.getElementById('aiBody');
+const aiForm = document.getElementById('aiForm');
+const aiInput = document.getElementById('aiInput');
+let aiHistory = [];
+let aiGreeted = false;
+
+function openAI(){
+  aiPanel.classList.add('open');
+  if(!aiGreeted){
+    addMsg('bot', "Marhaba! I'm Aliya AI, your gold &amp; jewelry concierge. Ask me about today's gold rate, purity, custom jewelry, or use a quick action below.");
+    aiGreeted = true;
+  }
+}
+aiFab.addEventListener('click', openAI);
+document.getElementById('chatHeroBtn').addEventListener('click', openAI);
+document.getElementById('aiClose').addEventListener('click', ()=>aiPanel.classList.remove('open'));
+document.getElementById('sellGoldHero').addEventListener('click', (e)=>{ /* scrolls to contact via href, no override needed */ });
+
+function addMsg(role, text){
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  div.innerHTML = text;
+  aiBody.appendChild(div);
+  aiBody.scrollTop = aiBody.scrollHeight;
+  return div;
+}
+function addTyping(){
+  const div = document.createElement('div');
+  div.className = 'msg bot typing';
+  div.innerHTML = '<span></span><span></span><span></span>';
+  aiBody.appendChild(div);
+  aiBody.scrollTop = aiBody.scrollHeight;
+  return div;
+}
+
+function currentRatesSummary(){
+  return `24K: AED ${rateState['24'].price.toFixed(2)}/g, 22K: AED ${rateState['22'].price.toFixed(2)}/g, 21K: AED ${rateState['21'].price.toFixed(2)}/g, 18K: AED ${rateState['18'].price.toFixed(2)}/g, Spot: $${rateState['spot'].price.toFixed(2)}/oz (simulated demo rates).`;
+}
+
+async function askAliya(userText){
+  aiHistory.push({role:'user', content:userText});
+  const typingEl = addTyping();
+  const systemPrompt = `You are Aliya AI, the warm, knowledgeable concierge for Aliya Jewels L.L.C., a gold trader, bullion dealer, and custom jewelry manufacturer in Dubai Gold Souk, Deira (Gate No. 2, near Blue Sky Way Hotel). 
+Contact info you can share: WhatsApp +971 50 282 5414 or +971 56 723 3576, Office +971 4 352 5303, emails Kabeeraliyajewels56@gmail.com and info@aliyajewels.com.
+Services: gold buying/selling, bullion trading, scrap gold valuation, diamond setting, jewellery manufacturing, custom jewellery, gold plating, laser engraving, laser stamping, colour enameling, jewellery repair, GIA/HRD/IGI certification.
+Current indicative gold rates (simulated demo data, refresh every 30s): ${currentRatesSummary()}
+When asked for rates, share these figures and note they are indicative demo rates, recommending the live dashboard on the Live Gold Prices page for the latest figures.
+For appointment booking: ask for name, preferred date/time and purpose, then tell them to confirm instantly via WhatsApp at +971 50 282 5414.
+For selling gold: explain the process briefly (in-person weighing and purity check, instant payment) and encourage visiting the Gold Souk counter or messaging WhatsApp.
+Keep answers concise (2-4 sentences), warm, and elegant in tone — never pushy. Do not invent certifications, prices, or promises beyond what's stated here.`;
+
+  try{
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        model:"claude-sonnet-4-6",
+        max_tokens:1000,
+        system: systemPrompt,
+        messages: aiHistory
+      })
+    });
+    const data = await response.json();
+    typingEl.remove();
+    const text = (data.content||[]).map(b=>b.text||'').join('\\n').trim();
+    if(text){
+      addMsg('bot', text.replace(/\\n/g,'<br/>'));
+      aiHistory.push({role:'assistant', content:text});
+    } else {
+      addMsg('bot', "I couldn't quite reach our concierge service just now. For a fast answer, please WhatsApp us at +971 50 282 5414.");
+    }
+  }catch(err){
+    typingEl.remove();
+    addMsg('bot', "I'm briefly offline. For an instant answer, tap WhatsApp Us below or call +971 4 352 5303.");
+  }
+}
+
+aiForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  const text = aiInput.value.trim();
+  if(!text) return;
+  addMsg('user', text);
+  aiInput.value='';
+  askAliya(text);
+});
+
+document.getElementById('aiQuick').addEventListener('click', e=>{
+  const btn = e.target.closest('.chip');
+  if(!btn) return;
+  const q = btn.dataset.q;
+  openAI();
+  if(q==='wa'){ window.open('https://wa.me/971502825414','_blank'); return; }
+  const map = {
+    rate:"What's today's gold rate?",
+    calc:"Can you help me calculate the value of my gold?",
+    sell:"I want to sell my gold, how does it work?",
+    appt:"I'd like to book an appointment."
+  };
+  const msg = map[q];
+  addMsg('user', msg);
+  askAliya(msg);
+});
+
+/* Register service worker for PWA support (best-effort; requires HTTPS hosting) */
+if('serviceWorker' in navigator){
+  window.addEventListener('load', ()=>{
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+</script>
+</body>
+</html>
+
+
