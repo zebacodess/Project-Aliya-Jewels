@@ -1,0 +1,27 @@
+{
+  "currency": "AED",
+  "unit": "gram",
+  "rates": {
+    "18": 369.43,
+    "21": 431.01,
+    "22": 451.53,
+    "24": 492.58
+  },
+  "baseRates": {
+    "18": 369.43,
+    "21": 431.01,
+    "22": 451.53,
+    "24": 492.58
+  },
+  "markupPercent": {
+    "18": 0,
+    "21": 0,
+    "22": 0,
+    "24": 0
+  },
+  "spotUsdPerOz": 4171.8,
+  "priceUpdatedAt": "2026-10-12T11:50:10.000Z",
+  "generatedAt": "2026-10-13T10:31:46.012Z",
+  "source": "gold-api.com XAU/USD spot, converted at 3.6725 AED/USD",
+  "previous": null
+}

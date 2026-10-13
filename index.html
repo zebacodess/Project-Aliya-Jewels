@@ -899,7 +899,7 @@ function tickRates(){
   renderRates(); renderTicker(); updateCalc();
 }
 renderRates(); renderTicker();
-setInterval(tickRates, 30000);
+
 
 document.getElementById('curAED').addEventListener('click', ()=>{currency='AED'; document.getElementById('curAED').classList.add('active'); document.getElementById('curUSD').classList.remove('active'); renderRates(); renderTicker(); updateCalc();});
 document.getElementById('curUSD').addEventListener('click', ()=>{currency='USD'; document.getElementById('curUSD').classList.add('active'); document.getElementById('curAED').classList.remove('active'); renderRates(); renderTicker(); updateCalc();});
@@ -1131,6 +1131,7 @@ if('serviceWorker' in navigator){
   });
 }
 </script>
+<script src="gold-live.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,39 @@
+name: Update gold rates
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # 05:00 UTC = 09:00 Dubai, every day
+  workflow_dispatch: {}     # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gold-rates
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch spot price and write rates.json
+        run: node scripts/update-rates.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- rates.json; then
+            echo "No change"
+            exit 0
+          fi
+          git config user.name "gold-rates-bot"
+          git config user.email "gold-rates-bot@users.noreply.github.com"
+          git add rates.json
+          git commit -m "Update gold rates"
+          git push
