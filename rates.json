@@ -20,17 +20,17 @@
     "24": 0
   },
   "spotUsdPerOz": 4166.1,
-  "priceUpdatedAt": "2026-10-17T08:55:41.000Z",
-  "generatedAt": "2026-10-17T08:56:09.933Z",
+  "priceUpdatedAt": "2026-10-18T09:13:44.000Z",
+  "generatedAt": "2026-10-18T09:14:10.606Z",
   "source": "gold-api.com XAU/USD spot, converted at 3.6725 AED/USD",
   "previous": {
-    "date": "2026-10-16",
+    "date": "2026-10-17",
     "rates": {
-      "18": 370.95,
-      "21": 432.77,
-      "22": 453.38,
-      "24": 494.6
+      "18": 368.93,
+      "21": 430.42,
+      "22": 450.91,
+      "24": 491.91
     },
-    "spotUsdPerOz": 4188.9
+    "spotUsdPerOz": 4166.1
   }
 }
